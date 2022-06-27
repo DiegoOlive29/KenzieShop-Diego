@@ -1,14 +1,27 @@
 
 import HeadersTop from "./components/Headers/Headers";
-import MainProducts from "./components/MainProducts/MainProducts";
-import Cart from "./components/Cart/Cart";
+import { Switch, Route } from 'react-router-dom';
+import CartPage from "./pages/CartPage/index";
+import DashBoard from "./pages/DashBoard/index";
 function App() {
   return (
     <div className="App">
 
+    <Switch>
+      <Route exact path={"/"}>
+          
+        <DashBoard/>
+        
+      </Route>
 
-      <Cart/>
 
+      <Route  path={"/Cart"}>
+          <CartPage/>
+          
+      </Route>
+
+      
+    </Switch>
     </div>
   );
 }

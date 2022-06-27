@@ -1,14 +1,23 @@
 import "./ProductsCart.css"
+import { useDispatch } from "react-redux"
+import { removeCartThunk } from "../../store/modules/cart/thunks"
+function ProductsCart ({key,
+    name,
+    price,
+    id,
+    img,
+    }){
 
-function ProductsCart (){
+        const dispatch = useDispatch()
+
     return(
         <div className="productCart">
-            <img src="https://resultadosdigitais.com.br/files/2015/08/por-do-sol-e1440783856626.jpg" alt="" />
+            <img src={img} alt="" />
             
             <div className="productTextCart">
-                <span className="nameCart"> Nome</span>
-                <span> Price</span>
-                <button className="btnCart">Comprar</button>
+                <span className="nameCart"> {name.slice(0,20)}...</span>
+                <span> R$ {price}</span>
+                <button onClick={()=> dispatch(removeCartThunk(id))} className="btnCart">Remove</button>
             </div>
         </div>
     )

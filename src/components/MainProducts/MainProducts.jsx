@@ -1,24 +1,30 @@
-import Products from "../Products/Products"
-import "./MainProducts.css"
-import HeadersTop from "../Headers/Headers"
+import "./MainProducts.css";
+import HeadersTop from "../Headers/Headers";
+import Products from "../Products/Products";
+import { useSelector } from "react-redux";
 
-function MainProducts  (){
-    return(
-        <>
-        
-        <HeadersTop/>
-        
-        <div className="container">
-            <div className="content">
-                <Products/>
-                <Products/>
-                <Products/>
-                <Products/>
-            </div>
+function MainProducts() {
+  const productsItem = useSelector((store) => store.products);
+
+  return (
+    <>
+      <HeadersTop />
+
+      <div className="container">
+        <div className="content">
+          {productsItem.map((item) => (
+            <Products
+              key={item.id}
+              name={item.name}
+              price={item.price}
+              id={item.id}
+              img={item.img}
+              item={item}
+            />
+          ))}
         </div>
-
-        </>
-    )
-
-
-}export default  MainProducts
+      </div>
+    </>
+  );
+}
+export default MainProducts;

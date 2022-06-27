@@ -17,8 +17,9 @@
 
 img{
     width: 100px;
-    height: 100px;
+    height: 90px;
     border-radius: 9px 0px   0px 9px;
+    padding: 5px;
     
 }
 
