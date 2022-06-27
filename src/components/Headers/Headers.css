@@ -1,0 +1,35 @@
+.headTop{
+    height: 5vh;
+    width: 100vw;
+
+    background-color: #c6d6d6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Logo{
+    font-size: 20px;
+    margin-left: 20px;
+    color: #282832;
+    font-weight: bolder;
+    cursor:pointer;
+}
+
+.btnHeard{
+    border: none;
+    height: 30px;
+    color: #282832;
+
+    border-radius: 5px;
+    margin-right: 20px;
+    background-color: #c6d6d6;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor:pointer;
+}
+
+

@@ -1,0 +1,46 @@
+.product{
+    width: 350px;
+    height: 500px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+
+    background-color: white;
+    border: 2px solid #c6d6d6;
+
+    border-radius: 11px;
+
+    
+}
+
+img{
+    width: 350px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.productText{
+    width: 350px;
+    height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 16px;
+    color: black;
+}
+
+.productText > button{
+    margin-left:20px;
+    width: 100%;
+    height: 50px;
+    color: #282832;
+}
+.productText > .name {
+    margin-top: 10px;
+}
